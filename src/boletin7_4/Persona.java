@@ -35,11 +35,17 @@ public class Persona {
     }
     
     public void comparaPeso (Persona un,Persona dos){
+        String pesado;
         if (un.getPeso() >= dos.getPeso()){
+            pesado = un.getNombre();
             JOptionPane.showMessageDialog(null, "La persona de nombre: " + un.getNombre() + " pesa mas y la diferencia de peso"
-                    + " con la persona que se le comparo es de: " + (un.getPeso()-dos.getPeso()));                                 
+                    + " con la persona que se le comparo es de: " + (un.getPeso()-dos.getPeso()));
         }
-        else JOptionPane.showMessageDialog(null, "La persona de nombre: " + dos.getNombre() + " pesa mas y la diferencia de peso"
+        else {
+            pesado = dos.getNombre();
+            JOptionPane.showMessageDialog(null, "La persona de nombre: " + dos.getNombre() + " pesa mas y la diferencia de peso"
                     + " con la persona que se le comparo es de: " + (dos.getPeso()-un.getPeso()));
+        }
+         JOptionPane.showMessageDialog(null, "El mas pesado es: " + pesado);
     }
 }
